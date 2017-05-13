@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -25,6 +26,7 @@ public class FoodsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foods);
+
         foods = new ArrayList<>();
         ininFoods();
 
@@ -36,21 +38,21 @@ public class FoodsActivity extends AppCompatActivity {
     }
 
     private void ininFoods() {
-        Food food1 = new Food(R.drawable.food1, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food1 = new Food(R.drawable.food1, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求","￥3");
         foods.add(food1);
-        Food food2 = new Food(R.drawable.food2, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food2 = new Food(R.drawable.food2, "煎蛋面包，早餐，我～的最爱","￥3");
         foods.add(food2);
-        Food food3 = new Food(R.drawable.food3, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food3 = new Food(R.drawable.food3, "要想早餐吃得饱，两枚鸡蛋少不了，Prefecte!","￥5");
         foods.add(food3);
-        Food food4 = new Food(R.drawable.food4, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food4 = new Food(R.drawable.food4, "水果早餐，当然要属香蕉啦！保持好身材","￥3");
         foods.add(food4);
-        Food food5 = new Food(R.drawable.food5, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food5 = new Food(R.drawable.food5, "你说什么？想要喝的？皮蛋瘦肉粥啊！","￥5");
         foods.add(food5);
-        Food food6 = new Food(R.drawable.food6, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food6 = new Food(R.drawable.food6, "鸡蛋羹说，她可以给你想要的营养，还在等什么！","￥3.5");
         foods.add(food6);
-        Food food7 = new Food(R.drawable.food7, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food7 = new Food(R.drawable.food7, "小面包,当然要来找小光啊！据说还有水果呦！","￥3");
         foods.add(food7);
-        Food food8 = new Food(R.drawable.food8, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求");
+        Food food8 = new Food(R.drawable.food8, "听说三为汁和牛奶更配哦！","￥3");
         foods.add(food8);
     }
 

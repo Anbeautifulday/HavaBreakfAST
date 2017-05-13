@@ -47,6 +47,7 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
     public void onBindViewHolder(final ViewHolder holder, int position) {
         Food ad = foods.get(position);
         holder.ad_img.setImageResource(ad.getImgId());
+        holder.ad_money.setText(ad.getMoney());
         holder.ad_title.setText(ad.getInfo());
     }
 
@@ -58,11 +59,13 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
     static class ViewHolder extends RecyclerView.ViewHolder {
         View view;
         TextView ad_title;
+        TextView ad_money;
         ImageView ad_img;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.view = itemView;
+            ad_money = (TextView) itemView.findViewById(R.id.foodMoney);
             ad_title = (TextView) itemView.findViewById(R.id.foodTxt);
             ad_img = (ImageView) itemView.findViewById(R.id.foodPic);
         }

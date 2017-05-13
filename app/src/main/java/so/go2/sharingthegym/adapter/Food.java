@@ -8,10 +8,12 @@ public class Food {
 
     private int imgId;
     private String info;
+    private String money;
 
-    public Food(int imgId, String info) {
+    public Food(int imgId, String info, String money) {
         this.imgId = imgId;
         this.info = info;
+        this.money = money;
     }
 
     public String getInfo() {
@@ -22,4 +24,5 @@ public class Food {
         return imgId;
     }
 
+    public String getMoney() { return money; }
 }

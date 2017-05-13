@@ -128,7 +128,8 @@ public class MainActivity extends CheckPermissionsActivity
         if (id == R.id.plan) {
 
         } else if (id == R.id.fitnessGuide) {
-
+            Intent intent = new Intent(this, GuideActivity.class);
+            startActivity(intent);
         } else if (id == R.id.scan) {
             //二维码扫描
             Intent intent = new Intent(this, CaptureActivity.class);

@@ -50,12 +50,27 @@
         <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".TestActivity" />
-        <activity android:name=".PayActivity" />
+
+        <activity android:name=".PayActivity"
+            android:label="@string/orderConfirm"/>
+
         <activity
             android:name=".AdActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AboutusActivity" />
-        <activity android:name=".FoodsActivity" />
+
+        <activity
+            android:name=".AboutusActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/about"/>
+
+        <activity android:name=".FoodsActivity"
+            android:label="@string/foodChoose"/>
+
+        <activity
+            android:name=".GuideActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_activity_guide"/>
+
     </application>
 
 </manifest>

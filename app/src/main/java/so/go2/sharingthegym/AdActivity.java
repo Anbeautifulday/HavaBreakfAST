@@ -26,7 +26,6 @@ public class AdActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.adToolbar);
         setSupportActionBar(toolbar);
-        //关键下面两句话，设置了回退按钮，及点击事件的效果
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
