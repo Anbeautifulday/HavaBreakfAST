@@ -51,25 +51,42 @@
 
         <activity android:name=".TestActivity" />
 
-        <activity android:name=".PayActivity"
-            android:label="@string/orderConfirm"/>
+        <activity
+            android:name=".PayActivity"
+            android:label="@string/orderConfirm"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".AdActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".AboutusActivity"
+            android:label="@string/about"
             android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/about"/>
+            android:screenOrientation="portrait"/>
 
-        <activity android:name=".FoodsActivity"
-            android:label="@string/foodChoose"/>
+        <activity
+            android:name=".FoodsActivity"
+            android:label="@string/foodChoose"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".GuideActivity"
+            android:label="@string/title_activity_guide"
             android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/title_activity_guide"/>
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ButtomActivity"
+            android:label="@string/title_activity_buttom"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".FeedbackActivity"
+            android:label="@string/feedback"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
 
     </application>
 

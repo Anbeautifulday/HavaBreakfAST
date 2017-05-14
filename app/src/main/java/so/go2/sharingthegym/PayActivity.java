@@ -1,9 +1,12 @@
 package so.go2.sharingthegym;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
@@ -17,6 +20,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import so.go2.sharingthegym.model.uploadModel;
 import so.go2.sharingthegym.net.ApiService;
+import so.go2.sharingthegym.net.MyHttpURL;
 import so.go2.sharingthegym.net.RetrofitClient;
 
 public class PayActivity extends AppCompatActivity {
@@ -30,11 +34,24 @@ public class PayActivity extends AppCompatActivity {
     }
 
     private MenuSheetView menuSheetView;
+    private TextView orderShowName;
+    private TextView orderShowMoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
+
+        orderShowName = (TextView) findViewById(R.id.orderShowName);
+        orderShowMoney = (TextView) findViewById(R.id.orderShowMoney);
+
+        Intent intent = getIntent();
+        String name  = intent.getStringExtra("name");
+        String money = intent.getStringExtra("money");
+
+        orderShowName.setText(name);
+        orderShowMoney.setText(money);
+
         ButterKnife.bind(this);
         initMenuSheet();
         //测试
@@ -66,7 +83,29 @@ public class PayActivity extends AppCompatActivity {
 
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(PayActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                        int id = item.getItemId();
+
+                        switch (id) {
+                            case R.id.pay_ali :
+                                MyHttpURL.get("http://139.199.63.27/start.php?sn=01&time=80", new MyHttpURL.Callback() {
+                                    @Override
+                                    public void onResponse(String response) {
+                                        finish();
+                                        Toast.makeText(PayActivity.this, getResources().getString(R.string.success), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                                break;
+                            case R.id.pay_we_chat :
+                                MyHttpURL.get("http://139.199.63.27/start.php?sn=01&time=40", new MyHttpURL.Callback() {
+                                    @Override
+                                    public void onResponse(String response) {
+                                        finish();
+                                        Toast.makeText(PayActivity.this, getResources().getString(R.string.success), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                                break;
+                        }
+
                         if (bottomSheet.isSheetShowing()) {
                             bottomSheet.dismissSheet();
                         }

@@ -135,9 +135,11 @@ public class MainActivity extends CheckPermissionsActivity
             Intent intent = new Intent(this, CaptureActivity.class);
             startActivityForResult(intent,SCAN);
         } else if (id == R.id.invite) {
-
-        } else if (id == R.id.friends) {
-
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.shareContent));
+            intent.setType("text/plain");
+            startActivity(Intent.createChooser(intent, getResources().getString(R.string.shareTitle)));
         } else if (id == R.id.about) {
             Intent intent = new Intent(this, AboutusActivity.class);
             startActivity(intent);
@@ -247,10 +249,11 @@ public class MainActivity extends CheckPermissionsActivity
             CameraUpdate update = CameraUpdateFactory.changeLatLng(myLocation);
             amap.animateCamera(update);
         } else if (id == R.id.order) {
-            Intent intent = new Intent(this, FoodsActivity.class);
-            startActivity(intent);
+            Intent intent = new Intent(this, CaptureActivity.class);
+            startActivityForResult(intent,SCAN);
         } else if (id == R.id.feedback) {
-
+            Intent intent = new Intent(this, FeedbackActivity.class);
+            startActivity(intent);
         }
     }
     //****************************************************************************接口LocationSource

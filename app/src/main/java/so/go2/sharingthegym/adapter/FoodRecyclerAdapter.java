@@ -30,13 +30,20 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
+    public int getItemViewType(int position) {
+        return position;
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_item, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PayActivity.class);
+                intent.putExtra("name", foods.get(viewType).getInfo());
+                intent.putExtra("money", foods.get(viewType).getMoney());
                 context.startActivity(intent);
             }
         });

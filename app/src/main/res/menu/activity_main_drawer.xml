@@ -23,10 +23,6 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/invite" />
             <item
-                android:id="@+id/friends"
-                android:icon="@drawable/ic_menu_friends"
-                android:title="@string/friends" />
-            <item
                 android:id="@+id/about"
                 android:icon="@drawable/ic_menu_about"
                 android:title="@string/about" />

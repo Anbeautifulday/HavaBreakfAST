@@ -38,9 +38,9 @@ public class FoodsActivity extends AppCompatActivity {
     }
 
     private void ininFoods() {
-        Food food1 = new Food(R.drawable.food1, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求","￥3");
+        Food food1 = new Food(R.drawable.food1, "豆浆加奶酪，完美组合，满足你每天的蛋白质需求","￥4");
         foods.add(food1);
-        Food food2 = new Food(R.drawable.food2, "煎蛋面包，早餐，我～的最爱","￥3");
+        Food food2 = new Food(R.drawable.food2, "煎蛋面包，早餐，我～的最爱","￥5");
         foods.add(food2);
         Food food3 = new Food(R.drawable.food3, "要想早餐吃得饱，两枚鸡蛋少不了，Prefecte!","￥5");
         foods.add(food3);
@@ -52,7 +52,7 @@ public class FoodsActivity extends AppCompatActivity {
         foods.add(food6);
         Food food7 = new Food(R.drawable.food7, "小面包,当然要来找小光啊！据说还有水果呦！","￥3");
         foods.add(food7);
-        Food food8 = new Food(R.drawable.food8, "听说三为汁和牛奶更配哦！","￥3");
+        Food food8 = new Food(R.drawable.food8, "听说三明治和牛奶更配哦！","￥5");
         foods.add(food8);
     }
 
