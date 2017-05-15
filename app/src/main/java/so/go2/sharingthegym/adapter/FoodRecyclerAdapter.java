@@ -2,10 +2,7 @@ package so.go2.sharingthegym.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchUIUtil;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +12,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import so.go2.sharingthegym.MyApplication;
 import so.go2.sharingthegym.PayActivity;
 import so.go2.sharingthegym.R;
 
@@ -44,6 +40,7 @@ public class FoodRecyclerAdapter extends RecyclerView.Adapter<FoodRecyclerAdapte
                 Intent intent = new Intent(context, PayActivity.class);
                 intent.putExtra("name", foods.get(viewType).getInfo());
                 intent.putExtra("money", foods.get(viewType).getMoney());
+                intent.putExtra("imageId",foods.get(viewType).getImgId());
                 context.startActivity(intent);
             }
         });
