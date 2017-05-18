@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +36,7 @@ public class PayActivity extends AppCompatActivity {
     private MenuSheetView menuSheetView;
     private TextView orderShowName;
     private TextView orderShowMoney;
+    private ImageView orderShowImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +45,18 @@ public class PayActivity extends AppCompatActivity {
 
         orderShowName = (TextView) findViewById(R.id.orderShowName);
         orderShowMoney = (TextView) findViewById(R.id.orderShowMoney);
+        orderShowImage = (ImageView) findViewById(R.id.orderShowImage);
 
         Intent intent = getIntent();
+        int valuel = 0;
         String name  = intent.getStringExtra("name");
         String money = intent.getStringExtra("money");
+        valuel = intent.getIntExtra("imageId",valuel);
+        Log.d("jfsdljflkdsjflds",valuel+" ");
+
 
         orderShowName.setText(name);
+        orderShowImage.setImageResource(valuel);
         orderShowMoney.setText(money);
 
         ButterKnife.bind(this);
