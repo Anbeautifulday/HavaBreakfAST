@@ -2,5 +2,9 @@
     {
         "merged": "F:\\Android_file\\HavaBreakfAST\\lib_zxing-master\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
         "source": "F:\\Android_file\\HavaBreakfAST\\lib_zxing-master\\src\\main\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "G:\\anzhuo\\ziaBreakfAST\\lib_zxing-master\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "G:\\anzhuo\\ziaBreakfAST\\lib_zxing-master\\src\\main\\res\\xml\\preferences.xml"
     }
 ]
